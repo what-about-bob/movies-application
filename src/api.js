@@ -20,12 +20,12 @@ const addMovie = (title, rating, id) => {
       .then(() => console.log('Movie was added'))
       .catch(() => console.log('error'));
 };
-const editMovie = (title, rating, id) => {
+const deleteMovie = (title, rating, id) => {
 
   const newMovie = {title: title, rating: rating, id: id};
   const url = '/api/movies';
   const options = {
-    method: 'PATCH',
+    method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -38,6 +38,4 @@ const editMovie = (title, rating, id) => {
 
 
 
-
-
-export default {getMovies,addMovie}
+export default {getMovies,addMovie,deleteMovie}

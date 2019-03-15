@@ -11,7 +11,12 @@ function showMovies() {
     console.log('Here are all the movies:');
     movies.forEach(({title, rating, id}) => {
       console.log(`id#${id} - ${title} - rating: ${rating}`);
-      $("#containerformovie").append(`<div><div><ul><li>Id:${id}</li><li>title:${title}</li><li>rating:${rating}</li></ul></div></div>`);
+      $("#containerformovie").append(`<div><div><ul><li>Id:${id}
+                                </li><li>title:${title}
+                                </li><li>rating:${rating}
+                                </li>
+                                <li><button type="submit" class="btn btn-primary" id="deleteBtn">delete</button></li>
+                                </ul></div></div>`);
     });
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -36,6 +41,8 @@ function showMovies() {
   $('#showBtn').click(function () {
 showMovies()
   });
+
+
 
 
 
