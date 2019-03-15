@@ -16,11 +16,10 @@ function showMovies() {
                                 </li><li>title:${title}
                                 </li><li>rating:${rating}
                                 </li>
-                                <li><button type="submit" class="btn btn-primary" id="deleteBtn">delete</button></li>
                                 </ul></div></div>`);
     });
   }).catch((error) => {
-    alert('Oh no! Something went wrong.\nCheck the console for details.')
+    alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
   });
 
@@ -28,6 +27,7 @@ function showMovies() {
 
   let title= " ";
   let rating=0;
+  let idValue = 0
 
 
   $("#addBtn").click(function(e){
@@ -46,4 +46,8 @@ showMovies()
 
 $("#deleteBtn").click(function(){
 
-})
+idValue = $("#deleteID").val();
+  movies.deleteMovie(idValue);
+  showMovies()
+
+});

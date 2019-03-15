@@ -1,34 +1,9 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
+      "title": "Toy Story",
       "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "sab",
-      "rating": "4",
-      "id": 3
-    },
-    {
-      "title": "titanic",
-      "rating": "3",
-      "id": 4
-    },
-    {
-      "title": "ss",
-      "rating": "3",
-      "id": 5
-    },
-    {
-      "title": "",
-      "rating": "",
-      "id": 6
+      "id": 24
     }
   ]
 }

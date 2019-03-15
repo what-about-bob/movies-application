@@ -21,7 +21,7 @@ const addMovie = (title, rating, id) => {
       .catch(() => console.log('error'));
 };
 
-const deleteMovie = () => {
+const deleteMovie = (id) => {
 
 
   const url = '/api/movies';
