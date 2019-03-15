@@ -20,6 +20,22 @@ const addMovie = (title, rating, id) => {
       .then(() => console.log('Movie was added'))
       .catch(() => console.log('error'));
 };
+const editMovie = (title, rating, id) => {
+
+  const newMovie = {title: title, rating: rating, id: id};
+  const url = '/api/movies';
+  const options = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newMovie),
+  };
+  fetch(url, options)
+      .then(() => console.log('Movie was EDITED'))
+      .catch(() => console.log('error'));
+};
+
 
 
 

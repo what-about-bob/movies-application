@@ -6,15 +6,36 @@
 
 import movies from  './api.js';
 
-movies.getMovies().then((movies) => {
-  console.log('Here are all the movies:');
-  movies.forEach(({title, rating, id}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
+function showMovies() {
+  movies.getMovies().then((movies) => {
+    console.log('Here are all the movies:');
+    movies.forEach(({title, rating, id}) => {
+      console.log(`id#${id} - ${title} - rating: ${rating}`);
+      $("#containerformovie").append(`<div><div><ul><li>Id:${id}</li><li>title:${title}</li><li>rating:${rating}</li></ul></div></div>`);
+    });
+  }).catch((error) => {
+    alert('Oh no! Something went wrong.\nCheck the console for details.')
+    console.log(error);
   });
-}).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.')
-  console.log(error);
-});
 
-movies.addMovie('Matrix', 3, 3);
+}
+
+  let title=" ";
+  let rating=0;
+
+
+  $("#addBtn").click(function(e){
+    e.preventDefault();
+    title=$("#moviename").val();
+    rating=$("#rating").val();
+
+    movies.addMovie(title,rating);
+     showMovies();
+  });
+
+  $('#showBtn').click(function () {
+showMovies()
+  });
+
+
 
