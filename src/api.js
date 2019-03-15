@@ -30,10 +30,24 @@ const deleteMovie = (id) => {
 
   };
   fetch(url+"/"+id, options)
+      .then(() => console.log('Movie was deleted'))
+      .catch(() => console.log('error'));
+};
+
+
+const editMovie = (id) => {
+
+
+  const url = '/api/movies';
+  const options = {
+    method: 'PATCH',
+
+  };
+  fetch(url+"/"+id, options)
       .then(() => console.log('Movie was EDITED'))
       .catch(() => console.log('error'));
 };
 
 
 
-export default {getMovies,addMovie,deleteMovie}
+export default {getMovies,addMovie,deleteMovie,editMovie}

@@ -51,3 +51,10 @@ idValue = $("#deleteID").val();
   showMovies()
 
 });
+//
+// $("#editBtn").click(function(){
+//   idValue = $("#editId").val();
+//   movies.editMovie(idValue);
+//   showMovies()
+//
+// })
