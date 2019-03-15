@@ -7,6 +7,7 @@
 import movies from  './api.js';
 
 function showMovies() {
+  $('#containerformovie').html('');
   movies.getMovies().then((movies) => {
     console.log('Here are all the movies:');
     movies.forEach(({title, rating, id}) => {
@@ -25,7 +26,7 @@ function showMovies() {
 
 }
 
-  let title=" ";
+  let title= " ";
   let rating=0;
 
 
@@ -43,6 +44,6 @@ showMovies()
   });
 
 
+$("#deleteBtn").click(function(){
 
-
-
+})
