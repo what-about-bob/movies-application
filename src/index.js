@@ -11,7 +11,7 @@ const getMovies = () => {
       .then(response => response.json());
 
 };
-
+$(".loading").addClass('hidden');
 
 function showMovies() {
   $(".loading").addClass('show').fadeOut(2000);
@@ -34,7 +34,7 @@ function showMovies() {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
   });
-  // $(".loading").addClass('show');
+
 }
 
 
@@ -44,12 +44,12 @@ function showMovies() {
 
 
   $("#addBtn").click(function(e){
-    $(".loading").addClass('show').fadeOut(2000);
+    $(".loading").fadeIn().fadeOut(2000);
     e.preventDefault();
-    // $(".loading").toggleClass('show');
+
     title=$("#moviename").val();
     rating=$("#rating").val();
-    // $(".loading").addClass('show');
+
     movies.addMovie(title,rating);
 
 
@@ -57,15 +57,17 @@ function showMovies() {
 
 
   });
-// $(".loading").addClass('hidden');
-  $('#showBtn').click(function () {
 
+
+  $('#showBtn').click(function () {
+    $(".loading").fadeIn().fadeOut(2000);
 showMovies()
 
   });
 
 
 $("#deleteBtn").click(function(){
+  $(".loading").fadeIn().fadeOut(2000);
 
 idValue = $("#deleteID").val();
   movies.deleteMovie(idValue);
@@ -73,6 +75,7 @@ idValue = $("#deleteID").val();
 
 });
 $('#containerformovie').on('click', '.delete', function (event){
+  $(".loading").fadeIn().fadeOut(2000);
   let deleteFilm = $(event.target).val();
   // console.log(deleteID);
   movies.deleteMovie(deleteFilm);
