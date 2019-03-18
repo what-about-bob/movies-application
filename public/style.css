@@ -55,4 +55,10 @@ input {
     display:none;
 }
 
-
+.hiding {
+    display: none;
+}
+h1{
+    background-color: white;
+    opacity:6;
+}

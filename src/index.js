@@ -26,6 +26,8 @@ function showMovies() {
                                 </li>
                                 <li>
                                 <button class="btn-warning delete"  value="${id}">DELETE</button></li>
+                                <li>
+                                <button class="btn-warning editMovie mt-2 mb-2" value="${id}">EDIT</button></li>
                                 </ul></div></div>`);
 
 
@@ -38,12 +40,13 @@ function showMovies() {
 }
 
 
+
   let title= " ";
   let rating=0;
   let idValue = 0
 
-
   $("#addBtn").click(function(e){
+
     $(".loading").fadeIn().fadeOut(2000);
     e.preventDefault();
 
@@ -74,6 +77,8 @@ idValue = $("#deleteID").val();
   showMovies()
 
 });
+
+
 $('#containerformovie').on('click', '.delete', function (event){
   $(".loading").fadeIn().fadeOut(2000);
   let deleteFilm = $(event.target).val();
@@ -82,6 +87,11 @@ $('#containerformovie').on('click', '.delete', function (event){
 showMovies();
 });
 
+
+$(document).on('click', 'button.editMovie', (e) => {
+  e.preventDefault();
+  $('.edit').toggleClass('hiding');
+});
 
 
 

@@ -1,24 +1,14 @@
 {
   "movies": [
     {
-      "title": "test",
-      "rating": "4 stars",
-      "id": 4
-    },
-    {
-      "title": "test1",
-      "rating": "3 stars",
-      "id": 5
-    },
-    {
-      "title": "test3",
-      "rating": "3 stars",
-      "id": 6
-    },
-    {
       "title": "test3",
       "rating": "3 stars",
       "id": 7
+    },
+    {
+      "title": "Forest Gump",
+      "rating": "4 stars",
+      "id": 8
     }
   ]
 }
