@@ -2,9 +2,60 @@ html, body {
     height: 100%;
 }
 
-.container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-100%);
-    text-align: center;
+/*.container {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-100%);*/
+    /*text-align: center;*/
+/*}*/
+
+body{
+    background-image:url("black-background_00313351.jpg");
 }
+
+.jumbotron{
+    background-image:url("movie5.jpg");
+    height:300px;
+
+}
+
+jumbotron h1 {
+    text-align: center;
+    color: rgb(204, 204, 204);
+    background-color: rgba(6, 6, 41, 0.5);
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    height: 35px;
+    width: 200px;
+    font-size:10px;
+
+}
+.loading {
+
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: 150px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.hidden{
+    display:none;
+}
+.show{
+    display:block;
+}
+
+

@@ -1,19 +1,14 @@
 {
   "movies": [
     {
-      "title": "Toy Story",
-      "rating": "4",
-      "id": 24
-    },
-    {
-      "title": "sad",
-      "rating": "3",
-      "id": 25
-    },
-    {
       "title": "",
-      "rating": "",
-      "id": 26
+      "rating": "4 stars",
+      "id": 3
+    },
+    {
+      "title": "tst",
+      "rating": "4 stars",
+      "id": 4
     }
   ]
 }
